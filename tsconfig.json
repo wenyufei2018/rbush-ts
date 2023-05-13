@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "node16",
+    "rootDir": ".",
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "removeComments": true
+  },
+  "include": ["index.ts"]
+}

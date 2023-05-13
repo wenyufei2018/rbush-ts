@@ -1,0 +1,42 @@
+{
+  "name": "rbush-ts",
+  "version": "0.0.0",
+  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "main": "dist/rbush.cjs.js",
+  "module": "dist/rbush.esm.js",
+  "devDependencies": {
+    "@types/benchmark": "^2.1.2",
+    "@types/node": "~18",
+    "@types/tape": "^4.13.4",
+    "@typescript-eslint/eslint-plugin": "~5.59",
+    "@typescript-eslint/parser": "~5.59",
+    "benchmark": "^2.1.4",
+    "eslint": "~8.38",
+    "eslint-config-prettier": "~8.8",
+    "esm": "^3.2.25",
+    "prettier": "~2.8",
+    "rimraf": "~5.0",
+    "rollup": "^3.22.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tape": "^5.6.3",
+    "ts-api-utils": "~0.0.44",
+    "ts-essentials": "^9.3.2",
+    "typescript": "~5.0"
+  },
+  "scripts": {
+    "prebuild": "npm run lint",
+    "build": "rollup -c",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "lint": "eslint . --ext .ts --ext .mts",
+    "test": "tape -r esm index.test.js",
+    "perf": "node -r esm ./bench/index.js",
+    "prettier": "prettier --config .prettierrc --write ."
+  },
+  "files": [
+    "index.ts",
+    "dist"
+  ],
+  "dependencies": {
+    "quickselect": "^2.0.0"
+  }
+}
